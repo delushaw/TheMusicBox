@@ -1,0 +1,243 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    
+}
+
+header{
+    background: #262626; 
+    width: 100vw;
+    height: 50px;
+    position:fixed;
+    top:0; left:0;
+    padding:10px;
+}
+
+ul{
+    float:right;
+    list-style-type: none;
+    margin-top: 5px;
+    min-height: 400px;
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+ul li{
+    display: inline-block;
+}
+
+ul li a{
+    text-decoration:none;
+    color: #ffffff;
+    padding: 0px 20px;
+    border: 3px solid transparent;
+    transition: 0.5 ease;
+}
+
+ul li a:hover{
+    background-color: #959494;
+    color:rgb(255, 255, 255);
+}
+
+h1 {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    font-weight: normal;
+    color: rgb(255, 255, 255);
+}
+
+div {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+body{
+    background: rgb(255, 255, 255);
+    color:#000000
+    
+}
+
+.column {
+    float: left;
+    width: 8.10%;
+    padding-left: 4px;
+}
+
+.row::after {
+    content:"";
+    display: table;
+    clear: both;
+}
+
+.grid-container {
+    /* position:absolute; ALI DID THIS*/
+    top:50%;
+    /* transform:translateY(-50%); ALI DID THIS */
+    display:grid;
+    width:400vw;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+    padding-top:2em;
+    padding-bottom:2em;
+}
+
+video {
+    display: block;
+    margin: 0 auto;
+}
+
+.timeline {
+    /* position:absolute; ALI DID THIS */
+    border-bottom:3px solid rgb(42,42,42);
+    width:403vw;
+    top:80vh;
+    height:0;
+    display:grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.dot {
+    height:30px;
+    width:30px;
+    border-radius:50%;
+    background:rgb(255, 252, 252);
+    border:3px solid #262626;
+    margin-top:-14px;
+    margin-left:9.5vw;
+}
+
+.year-container {
+    display:grid;
+    grid-template-columns:repeat(12, 1fr);
+    width:403vw;
+}
+
+.year-container h3 {
+    font-size: 70px;
+    color: #262626;
+    padding-left: 125px;
+    /* padding-top: 600px; ALI DID THIS */
+    padding-top:1em;
+}
+
+.audio-container{
+    display:grid;
+    grid-template-columns:repeat(12, 1fr);
+    width:403vw;
+    padding-top: 100px;
+    padding-left: 100px;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content{
+    text-align: center;
+}
+
+.content h3{
+    font-size: 30px;
+    color:#ffffff;
+    margin:auto;
+    max-width:800px;
+}
+
+.background-clip{
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    position:absolute
+}
+
+
+@media (min-aspect-ratio: 16/9){
+    #videoBG {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-aspect-ratio: 16/9){
+    #videoBG {
+        width: auto;
+        height: 100%;
+    }
+}
+
+.paragraphs{
+    font-size: 20px;
+    padding-top: 20px;
+    color:#262626;
+    margin:auto;
+    max-width:1150px;
+}
+
+.Works-Cited-Title{
+    text-align: center;
+    font-size: 30px;
+    padding-top: 90px;
+    color:#262626;
+    margin: auto;
+    max-width: 800px;
+}
+
+
+.textOverImage{
+    width: 400px;
+    height: 400px;
+    display:inline-block;
+    background-size: cover;
+    margin: 4px;
+    position:relative;
+    cursor:pointer;
+    overflow:hidden;
+}
+
+.textOverImage > input {
+    display: none;
+}
+
+.textOverImage > div, .textOverImage > h2 {
+    position:absolute;
+    background-color:rgb(42, 42, 42);
+    bottom: 20px;
+    left: 4px;
+    right: 4px;
+    border-radius: 4px;
+    padding: 27px;
+    overflow:hidden;
+    opacity: 0;
+    transition: .3s;
+}
+
+.textOverImage:hover > h2,.textOverImage > input:checked + h2+ div{
+    bottom: 4px;
+    opacity:1;
+}
+
+.textOverImage > input:checked + h2{
+    bottom: -20px;
+    opacity: 0;
+}
+
+.textOverImage > h2{
+    margin:0;
+}
+
+
+
+
+/* note: font size for description and change text for the description */
